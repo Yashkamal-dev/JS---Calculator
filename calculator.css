@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  width: 100vw;
+  height: 5rem;
+  padding: 10px;
+  font-size: 1.5rem;
+
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+
+  position: fixed;
+  top: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* visibility: hidden; */
+}
+
+body {
+  height: max-content;
+  background-color: #000000;
+  /* height: 100vh; */
+}
+
+.main-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 21, 42);
+  /* background: radial-gradient(rgb(42, 40, 65), rgb(17, 16, 34)); */
+  background: radial-gradient(rgb(42, 40, 65), rgb(7, 6, 14));
+
+  width: 100vw;
+  height: 91.5vh;
+  /* height: 100%; */
+  padding-top: 5em;
+}
+
+.cal-con {
+  /* background-color: cyan; */
+  /* width: max-content; */
+
+  display: grid;
+  /* grid-auto-columns: 100px; */
+  /* grid-auto-rows: 100px; */
+  /* justify-content: center; */
+  grid-template-areas:
+    "screen screen screen screen"
+    "box1 box2 box3 box4"
+    "box5 box6 box7 box8"
+    "box9 box10 box11 box12"
+    "box13 box14 box15 box16"
+    "box17 box17 box18 box19";
+  gap: 1rem;
+
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#zero {
+  width: auto;
+}
+
+.num {
+  background: linear-gradient(to right, #d2d4df, rgb(160, 162, 182));
+}
+
+.ac,
+.c,
+.division,
+.bs,
+.mul,
+.sub,
+.add {
+  color: white;
+  background: linear-gradient(to right, rgb(42, 141, 226), rgb(23, 74, 198));
+}
+
+.equal {
+  color: white;
+  background: linear-gradient(to right, rgb(240, 164, 15), rgb(222, 92, 36));
+}
+
+.btn {
+  min-height: 100px;
+  min-width: 100px;
+  height: 110px;
+  width: 200px;
+  font-size: 3em;
+  font-weight: lighter;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.screen {
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.202);
+}
+
+.exp-ans-container {
+  display: flex;
+  justify-content: end;
+}
+
+.answer {
+  color: white;
+  height: 7rem;
+  width: fit-content;
+  font-size: 4.5rem;
+}
+
+/* the dis blocks */
+.dis {
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.exp {
+  /* background: violet; */
+  color: white;
+  font-size: 4.5rem;
+  position: relative;
+  height: 7rem;
+  width: fit-content;
+  /* border-top: 1px solid; */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  /* margin-top: 0.1rem; */
+  /* overflow: hidden; */
+}
+
+.symbol {
+  height: 4rem;
+  width: min-content;
+  position: absolute;
+  bottom: 0px;
+  left: 0.3rem;
+  color: black;
+  /* background-color: green; */
+}
+
+.ans {
+  /* background: blue; */
+  color: white;
+  font-size: 2.5rem;
+  min-height: 47px;
+  border-top: 1px solid rgba(255, 255, 255, 0.555);
+  /* border-bottom: 1px solid; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  /* overflow: hidden; */
+}
+
+/* class which will be added in the expression box when press enter or equals */
+.eqexp {
+  /* to be added in exp */
+  color: rgba(255, 255, 255, 0.708);
+  /* justify-content: start; */
+  padding-left: 1rem;
+  font-size: 3rem;
+}
+
+.exp-ans-container-eq {
+  /* to be added in exp-ans-container */
+  justify-content: space-between;
+}
