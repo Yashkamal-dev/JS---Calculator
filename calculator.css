@@ -77,6 +77,11 @@ body {
   transform: scale(0.95);
 }
 
+.active {
+  transform: scale(0.95);
+  opacity: 0.95;
+}
+
 .screen {
   border-radius: 1rem;
   background: rgba(0, 0, 0, 0.202);

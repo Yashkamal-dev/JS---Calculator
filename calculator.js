@@ -15,6 +15,21 @@ let mul = document.querySelector(".mul"); //multiplication button
 let division = document.querySelector(".division"); //division button
 let equal = document.querySelector(".equal"); // equals button
 
+// accessing each button individually for keyboard animation styling
+// let btn = document.querySelectorAll(".btn")
+
+let Zero = document.querySelector("#zero");
+let One = document.querySelector("#one");
+let Two = document.querySelector("#two");
+let Three = document.querySelector("#three");
+let Four = document.querySelector("#four");
+let Five = document.querySelector("#five");
+let Six = document.querySelector("#six");
+let Seven = document.querySelector("#seven");
+let Eight = document.querySelector("#eight");
+let Nine = document.querySelector("#nine");
+let Dot = document.querySelector("#dot");
+
 let answer, num1, num2, num;
 let converter = null;
 let op = null;
@@ -307,5 +322,86 @@ document.addEventListener("keypress", (evt) => {
   } else if (evt.key == "Enter") {
     // equal function
     eqaulPerformFunction();
+  }
+});
+
+// adding the keyboard input animation styling
+document.addEventListener("keydown", (evt) => {
+  if (evt.key == "0") {
+    Zero.classList.add("active");
+  } else if (evt.key == "1") {
+    One.classList.add("active");
+  } else if (evt.key == "2") {
+    Two.classList.add("active");
+  } else if (evt.key == "3") {
+    Three.classList.add("active");
+  } else if (evt.key == "4") {
+    Four.classList.add("active");
+  } else if (evt.key == "5") {
+    Five.classList.add("active");
+  } else if (evt.key == "6") {
+    Six.classList.add("active");
+  } else if (evt.key == "7") {
+    Seven.classList.add("active");
+  } else if (evt.key == "8") {
+    Eight.classList.add("active");
+  } else if (evt.key == "9") {
+    Nine.classList.add("active");
+  } else if (evt.key == ".") {
+    Dot.classList.add("active");
+  } else if (evt.key == "Escape") {
+    allClear.classList.add("active");
+  } else if (evt.key == "/") {
+    division.classList.add("active");
+  } else if (evt.key == "Backspace") {
+    backSpace.classList.add("active");
+  } else if (evt.key == "*") {
+    mul.classList.add("active");
+  } else if (evt.key == "-") {
+    sub.classList.add("active");
+  } else if (evt.key == "+") {
+    add.classList.add("active");
+  } else if (evt.key == "Enter") {
+    equal.classList.add("active");
+  }
+});
+
+document.addEventListener("keyup", (evt) => {
+  if (evt.key == "0") {
+    Zero.classList.remove("active");
+  } else if (evt.key == "1") {
+    One.classList.remove("active");
+  } else if (evt.key == "2") {
+    Two.classList.remove("active");
+  } else if (evt.key == "3") {
+    Three.classList.remove("active");
+  } else if (evt.key == "4") {
+    Four.classList.remove("active");
+  } else if (evt.key == "5") {
+    Five.classList.remove("active");
+  } else if (evt.key == "6") {
+    Six.classList.remove("active");
+  } else if (evt.key == "7") {
+    Seven.classList.remove("active");
+  } else if (evt.key == "8") {
+    Eight.classList.remove("active");
+  } else if (evt.key == "9") {
+    Nine.classList.remove("active");
+  } else if (evt.key == ".") {
+    Dot.classList.remove("active");
+  } else if (evt.key == "Escape") {
+    allClear.classList.remove("active");
+  } else if (evt.key == "/") {
+    division.classList.remove("active");
+  } else if (evt.key == "Backspace") {
+    backSpace.classList.remove("active");
+  } else if (evt.key == "*") {
+    mul.classList.remove("active");
+  } else if (evt.key == "-") {
+    sub.classList.remove("active");
+  } else if (evt.key == "+") {
+    add.classList.remove("active");
+  } else if (evt.key == "Enter") {
+    equal.classList.remove("active");
   }
 });
