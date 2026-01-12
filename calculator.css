@@ -5,15 +5,13 @@
 
 .head {
   width: 100vw;
-  height: 5rem;
-  padding: 10px;
+  height: 10%;
   font-size: 1.5rem;
+  box-sizing: border-box;
 
   background-color: #000000;
+  /* background-color: rgb(54, 41, 26); */
   color: rgb(255, 255, 255);
-
-  position: fixed;
-  top: 0px;
 
   display: flex;
   justify-content: center;
@@ -21,8 +19,11 @@
 }
 
 body {
-  height: max-content;
+  height: 100vh;
   background-color: #000000;
+
+  /* by uncomenting below, we can not scroll the calculator page */
+  /* position: fixed;  */
 }
 
 .main-con {
@@ -30,10 +31,10 @@ body {
   justify-content: center;
   align-items: center;
   background: radial-gradient(rgb(42, 40, 65), rgb(7, 6, 14));
+  background-color: #d2d4df;
 
-  width: 100vw;
-  height: 91.5vh;
-  padding-top: 5em;
+  /* width: 100vw; */
+  height: 90%;
 }
 
 .cal-con {
@@ -47,16 +48,14 @@ body {
     "box13 box14 box15 box16"
     "box17 box17 box18 box19";
   gap: 1rem;
-
-  padding: 1rem;
-  border-radius: 1rem;
 }
 
 .btn {
-  min-height: 100px;
-  min-width: 100px;
+  /* min-height: 100px;
+  min-width: 100px; */
   height: 110px;
   width: 200px;
+
   font-size: 3em;
   border-radius: 1000px;
   cursor: pointer;
@@ -103,11 +102,14 @@ body {
 .exp {
   color: white;
   font-size: 4.5rem;
-  min-height: 7rem;
+  /* min-height: 7rem; */
   width: fit-content;
+
+  /* max width is not for the case of overflow handling */
   max-width: 848px;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+
+  /* border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; */
   overflow-x: hidden;
 }
 
@@ -167,4 +169,166 @@ body {
 .exp-ans-container-eq {
   /* to be added in exp-ans-container */
   justify-content: space-between;
+}
+
+/* for the smaller screen */
+
+@media (min-width: 340px) and (max-width: 640px) {
+  .head {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+  }
+
+  .cal-con {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    /* min-height: auto; */
+    /* min-width: auto; */
+    height: 85px;
+    width: 85px;
+
+    font-size: 2em;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .exp {
+    font-size: 2.5em;
+    /* min-height: 7rem; */
+    width: fit-content;
+
+    /* max width is not for the case of overflow handling */
+    max-width: 364px;
+
+    /* border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; */
+    overflow-x: hidden;
+  }
+
+  .answer {
+    min-height: 7rem;
+    width: fit-content;
+    font-size: 2.5rem;
+  }
+
+  .ans {
+    font-size: 1.7rem;
+    min-height: 47px;
+    overflow-x: hidden;
+  }
+
+  .eqexp {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 754px) {
+  .head {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+  }
+
+  .cal-con {
+    gap: 0.9rem;
+  }
+
+  .btn {
+    /* min-height: auto; */
+    /* min-width: auto; */
+    height: 100px;
+    width: 130px;
+
+    font-size: 2.3em;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .exp {
+    font-size: 2.57em;
+    /* min-height: 7rem; */
+    width: fit-content;
+
+    /* max width is not for the case of overflow handling */
+    max-width: 563px;
+
+    /* border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; */
+    overflow-x: hidden;
+  }
+
+  .answer {
+    min-height: 7rem;
+    width: fit-content;
+    font-size: 2.57rem;
+  }
+
+  .ans {
+    font-size: 1.8rem;
+    min-height: 47px;
+    overflow-x: hidden;
+  }
+
+  .eqexp {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* below 500px */
+@media (min-width: 754px) and (max-width: 900px) {
+  .head {
+    font-size: 1.4rem;
+    box-sizing: border-box;
+  }
+
+  .cal-con {
+    gap: 0.7rem;
+  }
+
+  .btn {
+    /* min-height: auto; */
+    /* min-width: auto; */
+    height: 100px;
+    width: 150px;
+
+    font-size: 2.3em;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.35);
+  }
+
+  .exp {
+    font-size: 2.7em;
+    /* min-height: 7rem; */
+    width: fit-content;
+
+    /* max width is not for the case of overflow handling */
+    max-width: 624px;
+
+    /* border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; */
+    overflow-x: hidden;
+  }
+
+  .answer {
+    min-height: 7rem;
+    width: fit-content;
+    font-size: 2.7rem;
+  }
+
+  .ans {
+    font-size: 2rem;
+    min-height: 47px;
+    overflow-x: hidden;
+  }
+
+  .eqexp {
+    padding-left: 1rem;
+    font-size: 1.7rem;
+  }
 }
