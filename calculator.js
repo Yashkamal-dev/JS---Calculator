@@ -16,8 +16,6 @@ let division = document.querySelector(".division"); //division button
 let equal = document.querySelector(".equal"); // equals button
 
 // accessing each button individually for keyboard animation styling
-// let btn = document.querySelectorAll(".btn")
-
 let Zero = document.querySelector("#zero");
 let One = document.querySelector("#one");
 let Two = document.querySelector("#two");
@@ -209,28 +207,24 @@ const calculator = (currentOperator) => {
   if (op == "+") {
     answer = num1 + num2;
     converter = null;
-    // firstOp = false;
     num1 = answer;
     exp.innerText = answer + ` ${currentOperator} `; // currnet operator;
     ans.innerText = "";
   } else if (op == "-") {
     answer = num1 - num2;
     converter = null;
-    // firstOp = false;
     num1 = answer;
     exp.innerText = answer + ` ${currentOperator} `; // currnet operator;
     ans.innerText = "";
   } else if (op == "*") {
     answer = num1 * num2;
     converter = null;
-    // firstOp = false;
     num1 = answer;
     exp.innerText = answer + ` ${currentOperator} `; // currnet operator;
     ans.innerText = "";
   } else if (op == "/") {
     answer = num1 / num2;
     converter = null;
-    // firstOp = false;
     num1 = answer;
     exp.innerText = answer + ` ${currentOperator} `; // currnet operator;
     ans.innerText = "";

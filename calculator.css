@@ -33,7 +33,6 @@ body {
   background: radial-gradient(rgb(42, 40, 65), rgb(7, 6, 14));
   background-color: #d2d4df;
 
-  /* width: 100vw; */
   height: 90%;
 }
 
@@ -51,13 +50,10 @@ body {
 }
 
 .bs-image {
-  color: rgb(255, 255, 255);
   height: 45%;
 }
 
 .btn {
-  /* min-height: 100px;
-  min-width: 100px; */
   height: 110px;
   width: 200px;
 
@@ -113,8 +109,6 @@ body {
   /* max width is not for the case of overflow handling */
   max-width: 848px;
 
-  /* border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; */
   overflow-x: hidden;
 }
 
@@ -177,7 +171,6 @@ body {
 }
 
 /* for the smaller screen */
-
 @media (min-width: 340px) and (max-width: 640px) {
   .head {
     font-size: 1.2rem;
@@ -189,8 +182,6 @@ body {
   }
 
   .btn {
-    /* min-height: auto; */
-    /* min-width: auto; */
     height: 85px;
     width: 85px;
 
@@ -202,14 +193,11 @@ body {
 
   .exp {
     font-size: 2.5em;
-    /* min-height: 7rem; */
     width: fit-content;
 
     /* max width is not for the case of overflow handling */
     max-width: 364px;
 
-    /* border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; */
     overflow-x: hidden;
   }
 
@@ -242,8 +230,6 @@ body {
   }
 
   .btn {
-    /* min-height: auto; */
-    /* min-width: auto; */
     height: 100px;
     width: 130px;
 
@@ -261,8 +247,6 @@ body {
     /* max width is not for the case of overflow handling */
     max-width: 563px;
 
-    /* border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; */
     overflow-x: hidden;
   }
 
@@ -284,7 +268,7 @@ body {
   }
 }
 
-/* below 500px */
+
 @media (min-width: 754px) and (max-width: 900px) {
   .head {
     font-size: 1.4rem;
@@ -296,8 +280,6 @@ body {
   }
 
   .btn {
-    /* min-height: auto; */
-    /* min-width: auto; */
     height: 100px;
     width: 150px;
 
@@ -315,8 +297,6 @@ body {
     /* max width is not for the case of overflow handling */
     max-width: 624px;
 
-    /* border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; */
     overflow-x: hidden;
   }
 
