@@ -63,18 +63,39 @@ let allClearFunction = () => {
 // the all clear button to clean exp and ans
 allClear.addEventListener("click", allClearFunction);
 
-// the clear button to just clean the working exp
-clear.addEventListener("click", () => {
-  ans.innerText = "";
-  // answer = null;
-  // num1 = null;
-  // num2 = null;
-  // op = null;
-});
+// clear button arrow function
+const clearFunction = () => {
+  let expression = exp.innerText;
+  let statment = "";
+  let n = expression.length;
+
+  for (let i = 0; i < n; i++) {
+    if (
+      expression[i] == "+" ||
+      expression[i] == "-" ||
+      expression[i] == "*" ||
+      expression[i] == "/"
+    ) {
+      op = null;
+      ans.innerText = "";
+      statment = statment + expression[i];
+      converter = null;
+      num2 = null;
+      firstOp = true;
+      secondOperator = false;
+      break;
+    } else {
+      statment = statment + expression[i];
+      exp.innerText = statment;
+    }
+  }
+};
+
+// the clear button to just clean the num2
+clear.addEventListener("click", clearFunction);
 
 // the backspace button event function
-
-const backSpaceFunction =  () => {
+const backSpaceFunction = () => {
   if (secondOperator == false) {
     // the block for num1
 
@@ -95,7 +116,6 @@ const backSpaceFunction =  () => {
 
     let tester = exp.innerText;
     let lastChar = tester[tester.length - 1];
-    console.log(lastChar);
 
     if (lastChar == "+") {
       op = null;
@@ -122,7 +142,7 @@ const backSpaceFunction =  () => {
   let expression = exp.innerText;
   expression = expression.slice(0, -1);
   exp.innerText = expression;
-}
+};
 
 // the backspace button
 backSpace.addEventListener("click", backSpaceFunction);
@@ -410,11 +430,16 @@ document.addEventListener("keydown", (evt) => {
 
     // ac button input from keyboard
     allClearFunction();
+  } else if (evt.key == "`") {
+    clear.classList.add("active");
+
+    // clear button input from keyboard
+    clearFunction();
   } else if (evt.key == "/") {
     division.classList.add("active");
   } else if (evt.key == "Backspace") {
     backSpace.classList.add("active");
-    
+
     // bs button input from keyboard
     backSpaceFunction();
   } else if (evt.key == "*") {
@@ -453,6 +478,8 @@ document.addEventListener("keyup", (evt) => {
     Dot.classList.remove("active");
   } else if (evt.key == "Escape") {
     allClear.classList.remove("active");
+  } else if (evt.key == "`") {
+    clear.classList.remove("active");
   } else if (evt.key == "/") {
     division.classList.remove("active");
   } else if (evt.key == "Backspace") {
