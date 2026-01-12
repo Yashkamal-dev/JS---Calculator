@@ -50,6 +50,11 @@ body {
   gap: 1rem;
 }
 
+.bs-image {
+  color: rgb(255, 255, 255);
+  height: 45%;
+}
+
 .btn {
   /* min-height: 100px;
   min-width: 100px; */
