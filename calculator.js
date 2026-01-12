@@ -35,6 +35,7 @@ let converter = null;
 let op = null;
 let firstOp = true;
 let equalPress = false;
+let secondOperator = false;
 
 const cleanUp = () => {
   answer = null;
@@ -46,8 +47,7 @@ const cleanUp = () => {
   firstOp = true;
 };
 
-// the all clear button to clean exp and ans
-allClear.addEventListener("click", () => {
+let allClearFunction = () => {
   ans.innerText = "";
   exp.innerText = "";
   answer = null;
@@ -57,7 +57,11 @@ allClear.addEventListener("click", () => {
   op = null;
   firstOp = true;
   answerBox.innerText = "";
-});
+  secondOperator = false;
+};
+
+// the all clear button to clean exp and ans
+allClear.addEventListener("click", allClearFunction);
 
 // the clear button to just clean the working exp
 clear.addEventListener("click", () => {
@@ -68,12 +72,60 @@ clear.addEventListener("click", () => {
   // op = null;
 });
 
+// the backspace button event function
+
+const backSpaceFunction =  () => {
+  if (secondOperator == false) {
+    // the block for num1
+
+    num1 = num1.toString();
+    num1 = num1.slice(0, -1);
+    num1 = Number(num1);
+
+    // console.log)()
+  } else {
+    // the block for num2
+
+    num2 = num2.toString();
+    num2 = num2.slice(0, -1);
+    num2 = Number(num2);
+    converter = converter.slice(0, -1);
+
+    eachPressCalculator();
+
+    let tester = exp.innerText;
+    let lastChar = tester[tester.length - 1];
+    console.log(lastChar);
+
+    if (lastChar == "+") {
+      op = null;
+      ans.innerText = "";
+      secondOperator = false;
+      firstOp = true;
+    } else if (lastChar == "-") {
+      op = null;
+      ans.innerText = "";
+      secondOperator = false;
+      firstOp = true;
+    } else if (lastChar == "*") {
+      op = null;
+      ans.innerText = "";
+      secondOperator = false;
+      firstOp = true;
+    } else if (lastChar == "/") {
+      op = null;
+      ans.innerText = "";
+      secondOperator = false;
+      firstOp = true;
+    }
+  }
+  let expression = exp.innerText;
+  expression = expression.slice(0, -1);
+  exp.innerText = expression;
+}
+
 // the backspace button
-backSpace.addEventListener("click", () => {
-  let answer = ans.innerText;
-  answer = answer.slice(0, -1);
-  ans.innerText = answer;
-});
+backSpace.addEventListener("click", backSpaceFunction);
 
 // function to print button value in exp box and assiging values to num1 and num2
 digits.forEach((button) => {
@@ -172,6 +224,7 @@ const calculator = (currentOperator) => {
 // function to execute -add(+) calculation
 const AddPerformFunction = () => {
   let currentOperator = "+";
+  secondOperator = true;
 
   calculator(currentOperator);
   firstOp = false;
@@ -181,6 +234,7 @@ const AddPerformFunction = () => {
 // function to execute -subtract(-) calculation
 const SubPerformFunction = () => {
   let currentOperator = "-";
+  secondOperator = true;
 
   calculator(currentOperator);
   firstOp = false;
@@ -191,6 +245,7 @@ const SubPerformFunction = () => {
 // function to execute -multiply(*) calculation
 const MulPerformFunction = () => {
   let currentOperator = "*";
+  secondOperator = true;
 
   calculator(currentOperator);
   firstOp = false;
@@ -201,6 +256,7 @@ const MulPerformFunction = () => {
 // function to execute -division(/) calculation
 const DivisionPerformFunction = () => {
   let currentOperator = "/";
+  secondOperator = true;
 
   calculator(currentOperator);
   firstOp = false;
@@ -351,10 +407,16 @@ document.addEventListener("keydown", (evt) => {
     Dot.classList.add("active");
   } else if (evt.key == "Escape") {
     allClear.classList.add("active");
+
+    // ac button input from keyboard
+    allClearFunction();
   } else if (evt.key == "/") {
     division.classList.add("active");
   } else if (evt.key == "Backspace") {
     backSpace.classList.add("active");
+    
+    // bs button input from keyboard
+    backSpaceFunction();
   } else if (evt.key == "*") {
     mul.classList.add("active");
   } else if (evt.key == "-") {
