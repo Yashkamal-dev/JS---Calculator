@@ -10,7 +10,7 @@ This calculator provides a simple yet powerful interface for performing basic ar
 
 ### Calculator UI
 
-<img src="Assets/Calculator.png" alt="Calculator UI" width="390">
+<img src="Assets/Calculator.png" alt="Calculator UI">
 
 ## Features
 
