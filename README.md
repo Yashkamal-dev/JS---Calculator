@@ -2,15 +2,21 @@
 
 A modern and responsive calculator application built using **HTML, CSS, and JavaScript**, focusing on clean UI, accurate logic, and smooth user interaction.
 
-## Overview
+---
+
+## 🔹 Overview
 
 This calculator provides a simple yet powerful interface for performing basic arithmetic operations. It supports both mouse and keyboard input, allowing users to interact naturally without breaking calculation flow.
 
-## Preview
+---
+
+## 🔹 Screenshots
 
 <img src="Assets/Calculator.png" alt="Calculator UI">
 
-## Features
+---
+
+## 🔹 Features
 
 - Fully functional calculator with basic arithmetic operations
 - Supports **mouse clicks and keyboard input**
@@ -20,33 +26,45 @@ This calculator provides a simple yet powerful interface for performing basic ar
 - Backspace functionality to remove the last entered character
 - Accurate and reliable calculation handling
 
-## User Interface
+---
+
+## 🔹 User Interface
 
 - Clean and user-friendly design
 - Well-spaced buttons for better usability
 - Smooth interaction feedback for an improved experience
 
-## Responsive Design
+---
+
+## 🔹 Responsive Design
 
 - Fully responsive layout
 - Works seamlessly across different screen sizes, including desktop, tablet, and mobile devices
 
-## Technologies Used
+---
+
+## 🔹 Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## Development Details
+---
+
+## 🔹 Development Details
 
 - Designed and developed independently
 - All logic, UI, and responsiveness implemented from scratch
 - No external libraries or code generators used
 
-## Project Status
+---
+
+## 🔹 Project Status
 
 ✅ Completed
 
-## Author
+---
+
+## 🔹 Author
 
 **Yashkamal Saraiya**
