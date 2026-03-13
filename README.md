@@ -6,9 +6,7 @@ A modern and responsive calculator application built using **HTML, CSS, and Java
 
 This calculator provides a simple yet powerful interface for performing basic arithmetic operations. It supports both mouse and keyboard input, allowing users to interact naturally without breaking calculation flow.
 
-## Screenshots
-
-### Calculator UI
+## Preview
 
 <img src="Assets/Calculator.png" alt="Calculator UI">
 
